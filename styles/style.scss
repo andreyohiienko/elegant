@@ -1,0 +1,271 @@
+@import 'normalize.css';
+@import 'layout';
+@import 'fonts';
+
+$light-text-color: #fffefe;
+$lighter-text-color: #fff;
+$dark-text-color: #222;
+
+@mixin title-font {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 700;
+}
+@mixin text-font {
+	font-family: 'Lato', sans-serif;
+	font-weight: 400;
+}
+@mixin secondary-font {
+	font-family: 'Lato', sans-serif;
+	font-weight: 300;
+}
+
+body {
+	font-family: 'Lato', sans-serif;
+	font-size: 16px;
+	line-height: 1.9;
+}
+
+.ba-banner {
+	background: url(../images/hero-bg.png) 0 0 no-repeat;
+	-webkit-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	padding-bottom: 45px;
+}
+
+.ba-header {
+	padding-top: 55px;
+}
+
+.ba-logo {
+	@include text-font;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: $light-text-color;
+	font-size: 17px;
+	line-height: 1;
+}
+
+.ba-nav {
+	&__list {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+	&__item {
+		margin-left: 45px;
+	}
+	&__link {
+		@incude text-font;
+		text-decoration: none;
+		text-transform: uppercase;
+		color: $light-text-color;
+		font-size: 14px;
+		line-height: 1;
+	}
+}
+
+.ba-agency {
+
+	&__title {
+		@include title-font;
+		color: $lighter-text-color;
+		text-align: center;
+		text-transform: uppercase;
+		font-size: 48px;
+		line-height: 1.25;
+		margin-top: 240px;
+		&:after {
+			content: '';
+			display: inline-block;
+			background-color: #FFF;
+			height: 2px;
+			width: 86px;
+			position: absolute;
+			left: 0;
+			right: 0;
+			margin: auto;
+			top: 425px;
+		}
+	}
+	&__content {
+		@include text-font;
+		color: $light-text-color;
+		text-align: center;
+		width: 50%;
+		font-size: 22px;
+		line-height: 1.3;
+		margin: 0 auto;
+		margin-top: 85px;
+	}
+	&__scroll {
+		display: block;
+		margin: 0 auto;
+		width: 150px;
+		height: 150px;
+		margin-top: 224px;
+	}
+	&__svg {
+		width: 150px;
+	}
+}
+
+.ba-services {
+	margin-top: 110px;
+	margin-bottom: 110px;
+	text-align: center;
+	&__title {
+		@include title-font;
+		text-transform: uppercase;
+		font-size: 35px;
+		line-height: 1.7;
+		margin: 0;
+		margin-bottom: 120px;
+		position: relative;
+		&:after {
+			content: "";
+			height: 2px;
+			width: 86px;
+			background-color: #222;
+			display: inline-block;
+			position: absolute;
+			right: 0;
+			left: 0;
+			margin: auto;
+			top: 100px;
+		}
+	}
+	&__sub-title {
+		@include title-font;
+		text-transform: capitalize;
+		font-size: 24px;
+		line-height: 1;
+	}
+	&__content {
+		width: 84%;
+		margin: 0 auto;
+		margin-top: 30px;
+		
+	}
+}
+
+.ba-dolore {
+	background: url(../images/dolore-bg.png) 0 0 no-repeat;
+	-webkit-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	position: relative;
+	&__text {
+		margin-top: 162px;
+		margin-bottom: 107px;
+	}
+	&__title {
+		@include text-font;
+		color: $lighter-text-color;
+		text-transform: uppercase;
+		letter-spacing: 0.040em;
+		font-size: 40px;
+		line-height: 2;
+		margin: 0;
+	}
+	&__content {
+		@include secondary-font;
+		color: $lighter-text-color;
+		font-size: 22px;
+		line-height: 1.3;
+		margin: 0;
+		margin-bottom: 65px;
+	}
+	&__link {
+		@include text-font;
+		font-size: 18px;
+		line-height: 1.5;
+		color: $lighter-text-color;
+		margin-top: 65px;
+	}
+	&__image {
+		position: absolute;
+		bottom: 0;
+		right: 100px;
+	}
+}
+
+.ba-work {
+	padding-bottom: 100px;
+	&__title {
+		@include title-font;
+		font-size: 35px;
+		line-height: 1.7;
+		text-transform: uppercase;
+		text-align: center;
+		position: relative;
+		&:after {
+			content: "";
+			background-color: #222;
+			height: 2px;
+			width: 86px;
+			display: inline-block;
+			position: absolute;
+			left: 50%;
+			-webkit-transform: translateX(-50%);
+			-moz-transform: translateX(-50%);
+			-ms-transform: translateX(-50%);
+			-o-transform: translateX(-50%);
+			transform: translateX(-50%);
+			top: 105px;
+		}
+		
+	}
+	&__planet {
+		background: url(../images/planet.png);
+		width: 370px;
+		height: 420px;
+	}
+	&__content {
+		
+	}
+	&__sub-title {
+		
+	}
+	&__airlines {
+		background: url(../images/airlines.png);
+		width: 370px;
+		height: 420px;
+	}
+	&__trimplements {
+		background: url(../images/trimplament.png);
+		width: 370px;
+		height: 420px;
+	}
+	.ba-work__link {
+		text-decoration: none;
+		text-transform: uppercase;
+		@include text-font;
+		font-size: 24px;
+		line-height: 1;
+		display: inline-block;
+		padding: 15px 150px;
+		border: 2px solid $dark-text-color;
+		color: $dark-text-color;
+		position: absolute;
+		left: 50%;
+		-webkit-transform: translateX(-50%);
+		-moz-transform: translateX(-50%);
+		-ms-transform: translateX(-50%);
+		-o-transform: translateX(-50%);
+		transform: translateX(-50%);
+		&:hover {
+			background-color: #222;
+			color: $lighter-text-color;
+		}
+		
+	}
+}
+
+
+.ba-touch {
+	background: url(../images/form-bg.png) 0 0 no-repeat;
+	-webkit-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}

@@ -1,0 +1,403 @@
+@import url(normalize.css);
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* use this class for block that has child floated elements */
+.ba-clearfix:before,
+.ba-clearfix:after {
+  content: '';
+  display: table;
+}
+
+.ba-clearfix:after {
+  clear: both;
+}
+
+/* hack for IE 6/7 */
+.ba-clearfix {
+  *zoom: 1;
+}
+
+/* classes for text */
+.ba-text-center {
+  text-align: center;
+}
+
+.ba-text-left {
+  text-align: left;
+}
+
+.ba-text-right {
+  text-align: right;
+}
+
+.ba-text-justify {
+  text-align: justify;
+}
+
+/* layout classes */
+.ba-container {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+[class*="ba-column-"] {
+  float: left;
+}
+
+.ba-float-left {
+  float: left;
+}
+
+.ba-float-right {
+  float: right;
+}
+
+/* use this class for block that has child floated elements */
+.ba-grid:before,
+.ba-grid:after {
+  content: '';
+  display: table;
+}
+
+.ba-grid:after {
+  clear: both;
+}
+
+/* hack for IE 6/7 */
+.ba-grid {
+  *zoom: 1;
+}
+
+.ba-grid {
+  margin: 0 -15px;
+}
+
+.ba-grid + .ba-grid {
+  margin-top: 30px;
+}
+
+.ba-grid > [class*="ba-column-"] {
+  padding: 0 15px;
+}
+
+.ba-column-12 {
+  width: 100%;
+}
+
+.ba-column-11 {
+  width: 91.66666667%;
+}
+
+.ba-column-10 {
+  width: 83.334%;
+}
+
+.ba-column-9 {
+  width: 75%;
+}
+
+.ba-column-8 {
+  width: 66.66666667%;
+}
+
+.ba-column-7 {
+  width: 58.3333333%;
+}
+
+.ba-column-6 {
+  width: 50%;
+}
+
+.ba-column-5 {
+  width: 41.66666667%;
+}
+
+.ba-column-4 {
+  width: 33.334%;
+}
+
+.ba-column-3 {
+  width: 25%;
+}
+
+.ba-column-2 {
+  width: 16.667%;
+}
+
+.ba-column-1 {
+  width: 8.334%;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.ba-banner {
+  background: url(../images/hero-bg.png) 0 0 no-repeat;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding-bottom: 45px;
+}
+
+.ba-header {
+  padding-top: 55px;
+}
+
+.ba-logo {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fffefe;
+  font-size: 17px;
+  line-height: 1;
+}
+
+.ba-nav__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ba-nav__item {
+  margin-left: 45px;
+}
+
+.ba-nav__link {
+  @incude text-font;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fffefe;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.ba-agency__title {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 48px;
+  line-height: 1.25;
+  margin-top: 240px;
+}
+
+.ba-agency__title:after {
+  content: '';
+  display: inline-block;
+  background-color: #FFF;
+  height: 2px;
+  width: 86px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 425px;
+}
+
+.ba-agency__content {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  color: #fffefe;
+  text-align: center;
+  width: 50%;
+  font-size: 22px;
+  line-height: 1.3;
+  margin: 0 auto;
+  margin-top: 85px;
+}
+
+.ba-agency__scroll {
+  display: block;
+  margin: 0 auto;
+  width: 150px;
+  height: 150px;
+  margin-top: 224px;
+}
+
+.ba-agency__svg {
+  width: 150px;
+}
+
+.ba-services {
+  margin-top: 110px;
+  margin-bottom: 110px;
+  text-align: center;
+}
+
+.ba-services__title {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 35px;
+  line-height: 1.7;
+  margin: 0;
+  margin-bottom: 120px;
+  position: relative;
+}
+
+.ba-services__title:after {
+  content: "";
+  height: 2px;
+  width: 86px;
+  background-color: #222;
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  left: 0;
+  margin: auto;
+  top: 100px;
+}
+
+.ba-services__sub-title {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  text-transform: capitalize;
+  font-size: 24px;
+  line-height: 1;
+}
+
+.ba-services__content {
+  width: 84%;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.ba-dolore {
+  background: url(../images/dolore-bg.png) 0 0 no-repeat;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: relative;
+}
+
+.ba-dolore__text {
+  margin-top: 162px;
+  margin-bottom: 107px;
+}
+
+.ba-dolore__title {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.040em;
+  font-size: 40px;
+  line-height: 2;
+  margin: 0;
+}
+
+.ba-dolore__content {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  color: #fff;
+  font-size: 22px;
+  line-height: 1.3;
+  margin: 0;
+  margin-bottom: 65px;
+}
+
+.ba-dolore__link {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #fff;
+  margin-top: 65px;
+}
+
+.ba-dolore__image {
+  position: absolute;
+  bottom: 0;
+  right: 100px;
+}
+
+.ba-work {
+  padding-bottom: 100px;
+}
+
+.ba-work__title {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 1.7;
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+}
+
+.ba-work__title:after {
+  content: "";
+  background-color: #222;
+  height: 2px;
+  width: 86px;
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+  top: 105px;
+}
+
+.ba-work__planet {
+  background: url(../images/planet.png);
+  width: 370px;
+  height: 420px;
+}
+
+.ba-work__airlines {
+  background: url(../images/airlines.png);
+  width: 370px;
+  height: 420px;
+}
+
+.ba-work__trimplements {
+  background: url(../images/trimplament.png);
+  width: 370px;
+  height: 420px;
+}
+
+.ba-work .ba-work__link {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 1;
+  display: inline-block;
+  padding: 15px 150px;
+  border: 2px solid #222;
+  color: #222;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.ba-work .ba-work__link:hover {
+  background-color: #222;
+  color: #fff;
+}
+
+.ba-touch {
+  background: url(../images/form-bg.png) 0 0 no-repeat;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
